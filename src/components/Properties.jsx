@@ -43,7 +43,7 @@ export default function Properties() {
               key={idx}
               src={src}
               alt={`Thumbnail ${idx}`}
-              className="w-32 h-24 object-cover rounded-md cursor-pointer hover:opacity-80"
+              className="w- h-24 object-cover rounded-md cursor-pointer hover:opacity-80"
             />
           ))}
         </div>

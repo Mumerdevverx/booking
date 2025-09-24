@@ -1,5 +1,5 @@
 import React from "react";
-import logo from  "./assets/logo.svg"
+import logo from  "../assets/logo.svg"
 import { Link } from "react-router-dom";
 
 export default function Header() {
@@ -18,30 +18,29 @@ export default function Header() {
         {/* Navigation - Centered */}
         <nav className="flex-1 flex justify-center">
           <div className="hidden md:flex space-x-8">
-            <a
-              href="#"
+            <Link to="/"
               className="text-red-600 font-bold"
             >
               Home
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+             to="properties"
               className="text-black  font-bold "
             >
               Properties
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="booking"
               className="text-black font-bold "
             >
               Bookings
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/"
               className="text-black font-bold"
             >
               About Us
-            </a>
+            </Link>
           </div>
         </nav>
       </div>
