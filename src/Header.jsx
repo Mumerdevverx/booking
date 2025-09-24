@@ -1,9 +1,9 @@
 import React from "react";
 import logo from  "./assets/logo.svg"
 
-export default function Navbar() {
+export default function Header() {
   return (
-   <div className="bg-gray-50">
+   <div className="bg-gray-50 fixed z-50 w-full ">
   {/* Header */}
   <header className="bg-white shadow-sm">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

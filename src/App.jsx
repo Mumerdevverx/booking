@@ -3,7 +3,7 @@ import React from 'react'
 import './App.css'
 
 import HomePage from './HomePage'
-import Navbar from './Navbar'
+import Header from './Header'
 import Properties from './Properties'
 import Booking from './Booking'
 import Payment  from './Payment'
@@ -15,11 +15,13 @@ function App() {
   return (
    <>
    
-   <div className=' p-10'>
-   <Navbar />
+   
+   <Header />
+   <div className='pt-16'>
    <HomePage />
-   <Properties />
    </div>
+   <Properties />
+  
   
    <Booking />
    <Payment />

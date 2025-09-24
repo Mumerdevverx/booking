@@ -1,4 +1,5 @@
 import React from "react";
+import { FiSearch } from "react-icons/fi";
 
 const properties = [
   {
@@ -71,9 +72,9 @@ const properties = [
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-[#FAF4F4]">
+    <div className="min-h-screen bg-[#FAF4F4] ">
       {/* Hero Section */}
-      <section className="flex flex-col md:flex-row items-center justify-between px-8 md:px-16 py-12">
+      <section className="flex flex-col  shadow-sm md:flex-row items-center justify-between px-8 md:px-16 py-20">
         {/* Left Content */}
         <div className="max-w-lg text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-snug">
@@ -100,20 +101,33 @@ export default function HomePage() {
 
       {/* Search Section */}
       <section className="bg-white py-12 text-center">
-        <h2 className="text-2xl font-bold text-gray-900">Discover Your Next Getaway</h2>
-        <div className="mt-6 flex justify-center">
-          <div className="flex border rounded-md shadow-sm overflow-hidden w-full max-w-xl">
-            <input
-              type="text"
-              placeholder="Search by location, property type, or amenities..."
-              className="flex-1 px-4 py-2 focus:outline-none text-gray-700"
-            />
-            <button className="px-6 bg-blue-900 text-white font-medium hover:bg-blue-800 transition">
-              Search
-            </button>
-          </div>
+      <h2 className="text-2xl font-bold text-gray-900">
+        Discover Your Next Getaway
+      </h2>
+
+      <div className="mt-6 flex justify-center">
+        <div className="flex items-center border rounded-md shadow-sm overflow-hidden w-full max-w-xl">
+          
+          {/* Search Icon */}
+          <span className="pl-3 text-gray-400">
+            <FiSearch className="h-5 w-5" />
+          </span>
+
+          {/* Input */}
+          <input
+            type="text"
+            placeholder="Search by location, property type, or amenities..."
+            className="flex-1 px-3 py-2 focus:outline-none text-gray-700"
+          />
+
+          {/* Button */}
+          
         </div>
-      </section>
+        <button className="px-6 py-2 text-white bg-[#4B5470]">
+            Search
+          </button>
+      </div>
+    </section>
           
            <div className="min-h-screen bg-gray-50 p-8">
       <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
