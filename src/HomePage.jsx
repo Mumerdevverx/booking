@@ -129,11 +129,11 @@ export default function HomePage() {
       </div>
     </section>
           
-           <div className="min-h-screen bg-gray-50 p-8">
+           <div className="min-h-screen bg-gray-50 p-20">
       <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
         Featured Properties
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {properties.map((property) => (
           <div
             key={property.id}
