@@ -105,8 +105,8 @@ export default function HomePage() {
         Discover Your Next Getaway
       </h2>
 
-      <div className="mt-6 flex justify-center">
-        <div className="flex items-center border rounded-md shadow-sm overflow-hidden w-full max-w-xl">
+      <div className="mt-6 flex justify-center gap-6">
+        <div className="flex items-center border rounded-md shadow-sm overflow-hidden w-[30%] max-w-xl">
           
           {/* Search Icon */}
           <span className="pl-3 text-gray-400">
@@ -123,7 +123,7 @@ export default function HomePage() {
           {/* Button */}
           
         </div>
-        <button className="px-6 py-2 text-white bg-[#4B5470]">
+        <button className="px-6 py-2 text-white rounded-md bg-[#4B5470]">
             Search
           </button>
       </div>
