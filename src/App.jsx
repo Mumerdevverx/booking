@@ -24,8 +24,6 @@ function App() {
           <Route path="/payment" element={<Payment />} />
         </Routes>
       </div>
-
-      {/* Footer always visible */}
       <Footer />
     </Router>
   );

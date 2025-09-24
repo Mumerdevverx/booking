@@ -4,7 +4,7 @@ import { FiSearch } from "react-icons/fi";
 const properties = [
   {
     id: 1,
-    name: "Cozy City Apartment",
+    name: "Cozy    Apartment",
     price: 120,
     availability: "Mon, Jul 1 - Fri, Jul 5",
     image:
@@ -16,7 +16,7 @@ const properties = [
     price: 150,
     availability: "Tue, Jul 2 - Sat, Jul 6",
     image:
-      "https://images.unsplash.com/photo-1600607687920-4e2a7f65b8e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTM3NTgxNDY3MDI4MjAyOTQ4NQ==/original/5fc7e7e4-8bb8-47c7-92e7-cb4217746ab8.jpeg?im_w=960",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const properties = [
     price: 200,
     availability: "Wed, Jul 3 - Sun, Jul 7",
     image:
-      "https://images.unsplash.com/photo-1600607687920-4e2a7f65b8e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE5NjgyODU4MDk5NTMzNjYzMA%3D%3D/original/9253f2c7-6dec-4392-84f9-4b7263e3ef72.png?im_w=960",
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ const properties = [
     price: 180,
     availability: "Thu, Jul 4 - Mon, Jul 8",
     image:
-      "https://images.unsplash.com/photo-1600585154163-1c1be6a53c9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-1257682100579478788/original/9ed8a9f2-1188-4cf1-bd90-fe2d42c6bd2c.jpeg?im_w=720",
   },
   {
     id: 5,
@@ -48,7 +48,7 @@ const properties = [
     price: 130,
     availability: "Sat, Jul 6 - Wed, Jul 10",
     image:
-      "https://images.unsplash.com/photo-1600607687920-4e2a7f65b8e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-1353694329077466185/original/2cb4557a-1cb0-4f27-a91a-559d9bba657a.jpeg?im_w=960",
   },
   {
     id: 7,
@@ -56,7 +56,7 @@ const properties = [
     price: 140,
     availability: "Sun, Jul 7 - Thu, Jul 11",
     image:
-      "https://images.unsplash.com/photo-1600585154163-1c1be6a53c9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-1209489582780330420/original/18b54c91-c3fb-44bd-9abf-00515132d0fb.jpeg?im_w=960",
   },
   {
     id: 8,
@@ -64,7 +64,7 @@ const properties = [
     price: 110,
     availability: "Mon, Jul 8 - Fri, Jul 12",
     image:
-      "https://images.unsplash.com/photo-1600607687920-4e2a7f65b8e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTM3NTgxNDY3MDI4MjAyOTQ4NQ==/original/5fc7e7e4-8bb8-47c7-92e7-cb4217746ab8.jpeg?im_w=960",
   },
 ];
 
@@ -134,33 +134,46 @@ export default function HomePage() {
         Featured Properties
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {properties.map((property) => (
-          <div
-            key={property.id}
-            className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
-          >
-            <img
-              src={property.image}
-              alt={property.name}
-              className="h-48 w-full object-cover"
-            />
-            <div className="p-4">
-              <div className="flex justify-between items-center">
-                <h3 className="text-lg font-semibold text-gray-900">
-                  {property.name}
-                </h3>
-                <span className="text-red-600 font-bold">${property.price}</span>
-                <span className="text-sm text-gray-500">/night</span>
-              </div>
-              <div className="mt-3 p-3 bg-gray-100 rounded text-center text-sm text-gray-700">
-                <p className="font-medium">Availability Preview</p>
-                <p>{property.availability}</p>
-              </div>
-            </div>
+  {properties.map((property) => (
+    <div
+      key={property.id}
+      className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
+    >
+      {/* Image */}
+      <img
+        src={property.image}
+        alt={property.name}
+        className="h-32 w-full object-cover" // 👈 image height kam ki
+      />
+
+      {/* Content */}
+      <div className="p-4">
+        {/* Name Left | Price Right */}
+        <div className="flex justify-between items-center">
+          <h3 className="text-lg font-semibold  text-gray-900">
+            {property.name}
+          </h3>
+
+          <div className="flex items-baseline gap-1">
+            <span className="text-red-600 font-bold">${property.price}</span>
+            <span className="text-sm text-gray-500">/night</span>
           </div>
-        ))}
+        </div>
+
+        {/* Availability */}
+        <div className="mt-3 p-3 bg-gray-100 rounded text-center text-sm text-black">
+          <p className="font-medium">Availability Preview</p>
+          <p className="text-black text-xs font-medium ">{property.availability}</p>
+        </div>
       </div>
     </div>
+  ))}
+</div>
+
+    </div>
+
+
+
 
     </div>
   );

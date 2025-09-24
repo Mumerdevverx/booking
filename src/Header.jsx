@@ -25,19 +25,19 @@ export default function Header() {
                 </Link>
                 <Link
                   to="/properties"
-                  className="text-black font-bold hover:text-gray-700 transition-colors"
+                  className="text-black font-bold  hover:text-red-600 transition-colors"
                 >
                   Properties
                 </Link>
                 <Link
                   to="/booking"
-                  className="text-black font-bold hover:text-gray-700 transition-colors"
+                  className="text-black font-bold hover:text-red-600 transition-colors"
                 >
                   Bookings
                 </Link>
                 <Link
                   to="/Payment"
-                  className="text-black font-bold hover:text-gray-700 transition-colors"
+                  className="text-black font-bold hover:text-red-600 transition-colors"
                 >
                   About Us
                 </Link>
