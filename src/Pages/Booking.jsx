@@ -66,7 +66,7 @@ export default function Booking() {
 
         {/* Actions */}
         <div className="mb-6 mt-10 flex gap-4 justify-center">
-          <Link to={`/viewbooking/${propertyId}`} className="bg-red-600 text-white px-4 py-2 rounded-lg shadow">
+          <Link to={`/properties/${propertyId}`} className="bg-red-600 text-white px-4 py-2 rounded-lg shadow">
             Explore More Properties
           </Link>
           <Link to={`/viewbooking/${ViewBookingId}`} className="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg shadow">
