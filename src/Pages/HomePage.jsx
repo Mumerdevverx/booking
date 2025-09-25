@@ -7,7 +7,7 @@ export default function HomePage() {
     <>
     <div className=" bg-[#FAF4F4] ">
       {/* Hero Section */}
-      <section className="flex flex-col  shadow-sm md:flex-row items-center justify-between px-8 md:px-16 py-20">
+      <section className="flex flex-col    shadow-sm md:flex-row items-center justify-between  min-md:py-10 max-sm:py-20 max-sm:px-4 lg:px-20 md:px-10 lg:py-25">
         {/* Left Content */}
         <div className="max-w-lg text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-snug">
