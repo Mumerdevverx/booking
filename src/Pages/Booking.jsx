@@ -64,11 +64,11 @@ export default function Booking() {
         </div>
 
         {/* Actions */}
-        <div className="mb-6 mt-10 flex gap-4 justify-center">
+        <div className="mb-6 mt-10 flex gap-4 max-sm:gap-2 max-sm:py-2 max-sm:px-2 justify-center">
           <Link to="/" className="bg-red-600 text-white px-4 py-2 rounded-lg shadow">
             Explore More Properties
           </Link>
-          <Link to={`/properties/${propertyId}`} className="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg shadow">
+          <Link to={`/properties/${propertyId}`} className="bg-gray-100 text-gray-800 min-md:px-6 min-md:py-2 max-sm:py-2 max-sm:px-2 lg:px-4 lg:py-2 rounded-lg shadow">
             View My Bookings
           </Link>
         </div>

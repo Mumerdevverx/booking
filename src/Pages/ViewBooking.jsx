@@ -209,7 +209,52 @@ export default function ViewBooking() {
           </div>
         </div>
       </div>
-      
+      <div className="  lg:px-20 max-sm:px-8 min-md:px-12 lg:mb-10 ">
+        <Card className="max-w-2xl border-gray-200 rounded-xl">
+          <h1 className="text-2xl font-bold text-gray-900">Serene Coastal Villa</h1>
+          <p className="text-gray-600">Malibu, California</p>
+
+          <div className="flex items-center gap-2 mt-2">
+            <span className="text-red-500">★★★★★</span>
+            <span className="text-gray-700 text-sm">4.8 / 5</span>
+          </div>
+
+          <p className="text-2xl font-semibold mt-2">
+            $750 <span className="text-lg font-normal">/ night</span>
+          </p>
+
+          <CardContent className="mb-20">
+            <h2 className="text-lg font-semibold text-gray-900 mb-2">About this place</h2>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Experience unparalleled luxury at our Serene Coastal Villa...
+            </p>
+          </CardContent>
+
+          <CardContent>
+            <h2 className="text-lg font-semibold text-gray-900 mb-4">
+              What this place offers
+            </h2>
+            <div className="grid grid-cols-2 gap-4 text-sm">
+              <div className="flex items-center gap-2 bg-gray-100 p-2 rounded-lg">
+                <Wifi className="h-5 w-5 text-gray-700" />
+                <span>Free Wi-Fi</span>
+              </div>
+              <div className="flex items-center gap-2 bg-gray-100 p-2 rounded-lg">
+                <Snowflake className="h-5 w-5 text-gray-700" />
+                <span>Air Conditioning</span>
+              </div>
+              <div className="flex items-center gap-2 bg-gray-100 p-2 rounded-lg">
+                <Utensils className="h-5 w-5 text-gray-700" />
+                <span>Fully Equipped Kitchen</span>
+              </div>
+              <div className="flex items-center gap-2 bg-gray-100 p-2 rounded-lg">
+                <Car className="h-5 w-5 text-gray-700" />
+                <span>Free Parking</span>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </>
   );
 }
