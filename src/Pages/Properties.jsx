@@ -80,7 +80,7 @@ const Properties = () => {
     };
     const ViewBookingId="booking114"
   return (
-    <div className='py-5 px-10'>
+    <div className='py-5 px-10 '>
       <section className="bg-white py-6 text-center">
         <h2 className="text-2xl font-bold text-gray-900">
           Discover Your Next Getaway

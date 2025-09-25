@@ -54,7 +54,7 @@ export default function ViewBooking() {
 
   return (
     <>
-      <div className="min-h-screen bg-white px-20 py-10 pt-30 flex flex-col lg:flex-row gap-8">
+      <div className="min-h-screen bg-white lg:px-20 max-sm:px-8 min-md:px-10 py-10 pt-30 flex flex-col lg:flex-row gap-8">
         {/* Left Side - Images */}
         <div className="flex-1">
           <div className="rounded-lg overflow-hidden shadow-md">
