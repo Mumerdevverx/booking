@@ -86,30 +86,43 @@ const Properties = () => {
           Discover Your Next Getaway
         </h2>
 
-        <div className="mt-6 flex justify-center gap-6">
-          <div className="flex items-center border rounded-md shadow-sm overflow-hidden w-[30%] max-w-xl">
-            {/* Search Icon */}
-            <span className="pl-3 text-gray-400">
-              <FiSearch className="h-5 w-5" />
-            </span>
+        <div className="mt-6 flex justify-center gap-4 flex-wrap">
+  {/* Input Box */}
+  <div
+    className="
+      flex items-center border rounded-md shadow-sm overflow-hidden
+      w-[80%] sm:w-[75%] md:w-[60%] lg:w-[30%] max-w-xl
+    "
+  >
+    {/* Search Icon */}
+    <span className="pl-3 text-gray-400">
+      <FiSearch className="h-5 w-5" />
+    </span>
 
-            {/* Input */}
-            <input
-              type="text"
-              placeholder="Search by location, property type, or amenities..."
-              className="flex-1 px-3 py-2 focus:outline-none text-gray-700"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-          </div>
+    {/* Input */}
+    <input
+      type="text"
+      placeholder="Search by location, property type, or amenities..."
+      className="flex-1 px-3 py-2 focus:outline-none text-gray-700"
+      value={search}
+      onChange={(e) => setSearch(e.target.value)}
+    />
+  </div>
 
-          <button
-            className="px-6 py-2 text-white rounded-md bg-[#4B5470]"
-            onClick={handleSearch}
-          >
-            Search
-          </button>
-        </div>
+  {/* Button */}
+  <button
+    className="
+      bg-[#4B5470] text-white rounded-md 
+      px-6 py-2 
+      sm:px-4 sm:py-2 sm:w-auto
+      md:px-6 md:py-2
+    "
+    onClick={handleSearch}
+  >
+    Search
+  </button>
+</div>
+
       </section>
       <Link to={`/viewbooking/${ViewBookingId}`} className="min-h-screen bg-gray-50">
         <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
