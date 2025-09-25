@@ -142,7 +142,7 @@ const Properties = () => {
                 </div>
                 <div className="mt-3 p-3 bg-gray-100 rounded text-center text-sm text-black">
                   <p className="font-medium">Availability Preview</p>
-                  <p className="text-black text-xs font-medium ">
+                  <p className="text-gray-500 text-xs font-medium ">
                     {property.availability}
                   </p>
                 </div>
