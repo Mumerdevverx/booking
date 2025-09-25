@@ -68,6 +68,7 @@ const properties = [
       "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTM3NTgxNDY3MDI4MjAyOTQ4NQ==/original/5fc7e7e4-8bb8-47c7-92e7-cb4217746ab8.jpeg?im_w=960",
   },
 ];
+
 const Properties = () => {
     const [search, setSearch] = useState(""); // search input state
     const [filtered, setFiltered] = useState(properties); // displayed properties
@@ -81,36 +82,37 @@ const Properties = () => {
     const ViewBookingId="booking114"
   return (
     <div className='py-5 px-10'>
-      <section className="bg-white py-6 text-center">
-        <h2 className="text-2xl font-bold text-gray-900">
-          Discover Your Next Getaway
-        </h2>
+<section className="bg-white py-6 text-center">
+  <h2 className="text-2xl font-bold text-gray-900">
+    Discover Your Next Getaway
+  </h2>
 
-        <div className="mt-6 flex justify-center gap-6">
-          <div className="flex items-center border rounded-md shadow-sm overflow-hidden w-[30%] max-w-xl">
-            {/* Search Icon */}
-            <span className="pl-3 text-gray-400">
-              <FiSearch className="h-5 w-5" />
-            </span>
+  <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 px-4">
+    <div className="flex items-center border rounded-md shadow-sm overflow-hidden w-full sm:w-[60%] lg:w-[40%]">
+      {/* Search Icon */}
+      <span className="pl-3 text-gray-400">
+        <FiSearch className="h-5 w-5" />
+      </span>
 
-            {/* Input */}
-            <input
-              type="text"
-              placeholder="Search by location, property type, or amenities..."
-              className="flex-1 px-3 py-2 focus:outline-none text-gray-700"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-          </div>
+      {/* Input */}
+      <input
+        type="text"
+        placeholder="Search by location, property type, or amenities..."
+        className="flex-1 px-3 py-2 focus:outline-none text-gray-700"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+    </div>
 
-          <button
-            className="px-6 py-2 text-white rounded-md bg-[#4B5470]"
-            onClick={handleSearch}
-          >
-            Search
-          </button>
-        </div>
-      </section>
+    <button
+      className="w-full sm:w-auto px-6 py-2 text-white rounded-md bg-[#4B5470]"
+      onClick={handleSearch}
+    >
+      Search
+    </button>
+  </div>
+</section>
+
       <Link to={`/viewbooking/${ViewBookingId}`} className="min-h-screen bg-gray-50">
         <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
           Featured Properties
