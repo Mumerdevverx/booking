@@ -1,7 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 
 export default function Booking() {
+  const propertyId = "Serene-Lakeside-Cabin";
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
       {/* Card Wrapper */}
@@ -63,12 +65,12 @@ export default function Booking() {
 
         {/* Actions */}
         <div className="mb-6 mt-10 flex gap-4 justify-center">
-          <button className="bg-red-600 text-white px-4 py-2 rounded-lg shadow">
+          <Link to="/" className="bg-red-600 text-white px-4 py-2 rounded-lg shadow">
             Explore More Properties
-          </button>
-          <button className="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg shadow">
+          </Link>
+          <Link to={`/properties/${propertyId}`} className="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg shadow">
             View My Bookings
-          </button>
+          </Link>
         </div>
       </div>
     </div>

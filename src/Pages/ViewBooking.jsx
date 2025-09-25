@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Wifi, Car, Utensils, Snowflake } from "lucide-react";
+import { Link } from "react-router-dom";
  
 
 // Custom Card Component
@@ -16,7 +17,7 @@ function CardContent({ children, className }) {
 }
 
 
-export default function Properties() {
+export default function ViewBooking() {
   const [guests, setGuests] = useState(1);
  
    const [highlightedDay, setHighlightedDay] = useState(null); // selected day
@@ -39,7 +40,7 @@ export default function Properties() {
     setCheckInDate(dateStr);
   };
 
-
+const bookingId = "Booking-123";  
 
   return (
     <>
@@ -137,9 +138,9 @@ export default function Properties() {
         </div>
 
         {/* Book Now Button */}
-        <button className="w-full bg-red-600 text-white py-3 rounded-md font-semibold">
+        <Link to={`/booking/${bookingId}`} className="w-full bg-red-600 text-white py-3 rounded-md font-semibold text-center block">
           Book Now
-        </button>
+        </Link>
       </div>
     </div>
 

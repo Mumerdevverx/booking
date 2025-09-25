@@ -1,12 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import HomePage from "./components/HomePage";
+import HomePage from "./Pages/HomePage";
 import Header from "./components/Header";
-import Properties from "./components/Properties";
-import Booking from "./components/Booking";
-import Payment from "./components/Payment";
+import Properties from "./Pages/Properties";
+import Booking from "./Pages/Booking";
+import Payment from "./Pages/Payment";
 import Footer from "./components/Footer";
+import ViewBooking from "./Pages/ViewBooking";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/properties/:id" element={<Properties />} />
           <Route path="/booking/:id" element={<Booking />} />
           <Route path="/payment/:id" element={<Payment />} />
+          <Route path="/viewbooking/:id" element={<ViewBooking/>} />
         </Routes>
       </div>
       <Footer />
