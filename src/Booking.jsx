@@ -4,10 +4,10 @@ export default function Booking() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
       {/* Card Wrapper */}
-      <div className="max-w-xl w-full shadow-xl rounded-2xl p-6 bg-white">
+      <div className="max-w-xl w-full shadow-xl  rounded-2xl  bg-white">
         
         {/* Header */}
-        <div className="text-center">
+        <div className="text-center  rounded-t-2xl p-10 bg-gray-200">
           <div className="h-12 w-12 mx-auto flex items-center justify-center rounded-full bg-green-100">
             <span className="text-green-600 text-2xl">✓</span>
           </div>
@@ -19,7 +19,7 @@ export default function Booking() {
         </div>
 
         {/* Booking Summary */}
-        <div className="mt-6">
+        <div className="mt-6 p-6">
           <h2 className="text-lg font-semibold text-gray-900 mb-2">Booking Summary</h2>
           <div className="text-sm divide-y divide-gray-200">
             <div className="flex justify-between py-2">
@@ -46,7 +46,7 @@ export default function Booking() {
         </div>
 
         {/* Payment Details */}
-        <div className="mt-6">
+        <div className=" px-6">
           <h2 className="text-lg font-semibold text-gray-900 mb-2">Payment Details</h2>
           <div className="flex justify-between items-center py-2">
             <span className="text-gray-600">Status:</span>
@@ -61,11 +61,11 @@ export default function Booking() {
         </div>
 
         {/* Actions */}
-        <div className="mt-6 flex gap-4 justify-center">
-          <button className="bg-red-600 text-white px-4 py-2 rounded-lg shadow hover:bg-red-700 transition">
+        <div className="mb-6 mt-10 flex gap-4 justify-center">
+          <button className="bg-red-600 text-white px-4 py-2 rounded-lg shadow">
             Explore More Properties
           </button>
-          <button className="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg shadow hover:bg-gray-200 transition">
+          <button className="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg shadow">
             View My Bookings
           </button>
         </div>

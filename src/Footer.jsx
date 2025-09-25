@@ -23,6 +23,7 @@ const Footer = () => {
 
             {/* Social Media Icons */}
             <div className="flex space-x-4">
+              
               <a href="#" className="text-black ">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path
