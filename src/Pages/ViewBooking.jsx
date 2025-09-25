@@ -88,69 +88,67 @@ export default function ViewBooking() {
         <div className="w-full lg:w-1/3 flex flex-col gap-8">
           {/* Availability Calendar */}
           <div className="bg-white px-2 rounded-lg shadow-md">
-  <h2 className="text-xl font-semibold mb-4">Availability</h2>
+            <h2 className="text-xl font-semibold mb-4">Availability</h2>
 
-  <div className="flex flex-col sm:flex-row gap-6">
-    {/* Check-in Box */}
-    <div className="flex-1">
-      <h3 className="font-semibold text-gray-700 mb-2 text-center">Check-in</h3>
-      <div className="grid grid-cols-7 text-center text-xs gap-1">
-        {[...Array(30)].map((_, i) => {
-          const day = i + 1;
-          const dateStr = formatDate(day);
-          return (
-            <div
-              key={`checkin-${i}`}
-              className={`p-1.5 rounded cursor-pointer ${
-                checkInDate === dateStr
-                  ? "bg-green-500 text-white"
-                  : "hover:bg-gray-100"
-              }`}
-              onClick={() => {
-                setCheckInDate(dateStr);
-                setCheckOutDate(""); // reset checkout
-                setSelecting("checkOut");
-              }}
-            >
-              {day}
-            </div>
-          );
-        })}
-      </div>
-    </div>
+            <div className="flex flex-col sm:flex-row gap-6">
+              {/* Check-in Box */}
+              <div className="flex-1">
+                <h3 className="font-semibold text-gray-700 mb-2 text-center">Check-in</h3>
+                <div className="grid grid-cols-7 text-center text-xs gap-1">
+                  {[...Array(30)].map((_, i) => {
+                    const day = i + 1;
+                    const dateStr = formatDate(day);
+                    return (
+                      <div
+                        key={`checkin-${i}`}
+                        className={`p-1.5 rounded cursor-pointer ${checkInDate === dateStr
+                            ? "bg-green-500 text-white"
+                            : "hover:bg-gray-100"
+                          }`}
+                        onClick={() => {
+                          setCheckInDate(dateStr);
+                          setCheckOutDate(""); // reset checkout
+                          setSelecting("checkOut");
+                        }}
+                      >
+                        {day}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
 
-    {/* Check-out Box */}
-    <div className="flex-1">
-      <h3 className="font-semibold text-gray-700 mb-2 text-center">Check-out</h3>
-      <div className="grid grid-cols-7 text-center text-xs gap-1">
-        {[...Array(30)].map((_, i) => {
-          const day = i + 1;
-          const dateStr = formatDate(day);
-          return (
-            <div
-              key={`checkout-${i}`}
-              className={`p-1.5 rounded cursor-pointer ${
-                checkOutDate === dateStr
-                  ? "bg-red-500 text-white"
-                  : "hover:bg-gray-100"
-              }`}
-              onClick={() => {
-                if (!checkInDate || new Date(dateStr) <= new Date(checkInDate)) {
-                  alert("Check-out must be after check-in");
-                  return;
-                }
-                setCheckOutDate(dateStr);
-                setSelecting("checkIn");
-              }}
-            >
-              {day}
+              {/* Check-out Box */}
+              <div className="flex-1">
+                <h3 className="font-semibold text-gray-700 mb-2 text-center">Check-out</h3>
+                <div className="grid grid-cols-7 text-center text-xs gap-1">
+                  {[...Array(30)].map((_, i) => {
+                    const day = i + 1;
+                    const dateStr = formatDate(day);
+                    return (
+                      <div
+                        key={`checkout-${i}`}
+                        className={`p-1.5 rounded cursor-pointer ${checkOutDate === dateStr
+                            ? "bg-red-500 text-white"
+                            : "hover:bg-gray-100"
+                          }`}
+                        onClick={() => {
+                          if (!checkInDate || new Date(dateStr) <= new Date(checkInDate)) {
+                            alert("Check-out must be after check-in");
+                            return;
+                          }
+                          setCheckOutDate(dateStr);
+                          setSelecting("checkIn");
+                        }}
+                      >
+                        {day}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
-          );
-        })}
-      </div>
-    </div>
-  </div>
-</div>
+          </div>
 
 
           {/* Booking Form */}
@@ -188,7 +186,7 @@ export default function ViewBooking() {
                 type="text"
                 value={guests}
                 readOnly
-                className="w-20 py-2 text-center border rounded-xl border-gray-300"
+                className="w-full py-2 text-center border rounded-xl border-gray-300"
               />
 
               <button
