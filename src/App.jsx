@@ -19,9 +19,9 @@ function App() {
       <div className="pt-16">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/properties" element={<Properties />} />
-          <Route path="/booking" element={<Booking />} />
-          <Route path="/payment" element={<Payment />} />
+          <Route path="/properties/:id" element={<Properties />} />
+          <Route path="/booking/:id" element={<Booking />} />
+          <Route path="/payment/:id" element={<Payment />} />
         </Routes>
       </div>
       <Footer />

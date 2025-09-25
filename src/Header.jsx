@@ -3,9 +3,13 @@ import logo from "./assets/logo.svg";
 import { Link } from "react-router-dom";
 
 export default function Header() {
+  const homeId = "HomePage";                      // Home param
+  const propertyId = "Serene-Lakeside-Cabin"; // Properties param
+  const bookingId = "Booking-123";            // Booking param
+  const paymentId = "Payment-456";            // Payment param
+
   return (
     <div className="bg-gray-50 fixed z-50 w-full">
-      {/* Header */}
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -18,25 +22,25 @@ export default function Header() {
             <nav className="flex-1 flex justify-center">
               <div className="hidden md:flex space-x-8">
                 <Link
-                  to="/"
-                  className="text-red-600 font-bold hover:text-red-700 transition-colors"
-                >
-                  Home
-                </Link>
+  to="/"
+  className="text-red-600 font-bold"
+>
+  Home
+</Link>
                 <Link
-                  to="/properties"
-                  className="text-black font-bold  hover:text-red-600 transition-colors"
+                  to={`/properties/${propertyId}`}
+                  className="text-black font-bold hover:text-red-600 transition-colors"
                 >
                   Properties
                 </Link>
                 <Link
-                  to="/booking"
+                  to={`/booking/${bookingId}`}
                   className="text-black font-bold hover:text-red-600 transition-colors"
                 >
                   Bookings
                 </Link>
                 <Link
-                  to="/Payment"
+                  to={`/payment/${paymentId}`}
                   className="text-black font-bold hover:text-red-600 transition-colors"
                 >
                   About Us

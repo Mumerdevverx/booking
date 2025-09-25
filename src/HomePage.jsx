@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 
 const properties = [
@@ -68,9 +68,16 @@ const properties = [
   },
 ];
 
-
-
 export default function HomePage() {
+  const [search, setSearch] = useState(""); // search input state
+  const [filtered, setFiltered] = useState(properties); // displayed properties
+  // handle search button click
+  const handleSearch = () => {
+    const filteredData = properties.filter((property) =>
+      property.name.toLowerCase().includes(search.toLowerCase())
+    );
+    setFiltered(filteredData);
+  };
   return (
     <div className="min-h-screen bg-[#FAF4F4] ">
       {/* Hero Section */}
@@ -78,11 +85,12 @@ export default function HomePage() {
         {/* Left Content */}
         <div className="max-w-lg text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-snug">
-            Find Your Perfect Stay 
- with <span className="text-black">StaySphere</span>
+            Find Your Perfect Stay with{" "}
+            <span className="text-black">StaySphere</span>
           </h1>
           <p className="mt-4 text-gray-600 text-lg">
-            Discover unique rental properties tailored to your needs. Book effortlessly, stay comfortably.
+            Discover unique rental properties tailored to your needs. Book
+            effortlessly, stay comfortably.
           </p>
           <button className="mt-6 px-6 py-3 bg-red-600 text-white rounded-md font-bold">
             Browse Properties
@@ -101,81 +109,75 @@ export default function HomePage() {
 
       {/* Search Section */}
       <section className="bg-white py-12 text-center">
-      <h2 className="text-2xl font-bold text-gray-900">
-        Discover Your Next Getaway
-      </h2>
+        <h2 className="text-2xl font-bold text-gray-900">
+          Discover Your Next Getaway
+        </h2>
 
-      <div className="mt-6 flex justify-center gap-6">
-        <div className="flex items-center border rounded-md shadow-sm overflow-hidden w-[30%] max-w-xl">
-          
-          {/* Search Icon */}
-          <span className="pl-3 text-gray-400">
-            <FiSearch className="h-5 w-5" />
-          </span>
+        <div className="mt-6 flex justify-center gap-6">
+          <div className="flex items-center border rounded-md shadow-sm overflow-hidden w-[30%] max-w-xl">
+            {/* Search Icon */}
+            <span className="pl-3 text-gray-400">
+              <FiSearch className="h-5 w-5" />
+            </span>
 
-          {/* Input */}
-          <input
-            type="text"
-            placeholder="Search by location, property type, or amenities..."
-            className="flex-1 px-3 py-2 focus:outline-none text-gray-700"
-          />
+            {/* Input */}
+            <input
+              type="text"
+              placeholder="Search by location, property type, or amenities..."
+              className="flex-1 px-3 py-2 focus:outline-none text-gray-700"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+          </div>
 
-          {/* Button */}
-          
-        </div>
-        <button className="px-6 py-2 text-white rounded-md bg-[#4B5470]">
+          <button
+            className="px-6 py-2 text-white rounded-md bg-[#4B5470]"
+            onClick={handleSearch}
+          >
             Search
           </button>
-      </div>
-    </section>
-          
-           <div className="min-h-screen bg-gray-50 p-20">
-      <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
-        Featured Properties
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-  {properties.map((property) => (
-    <div
-      key={property.id}
-      className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
-    >
-      {/* Image */}
-      <img
-        src={property.image}
-        alt={property.name}
-        className="h-32 w-full object-cover" // 👈 image height kam ki
-      />
-
-      {/* Content */}
-      <div className="p-4">
-        {/* Name Left | Price Right */}
-        <div className="flex justify-between items-center">
-          <h3 className="text-lg font-semibold  text-gray-900">
-            {property.name}
-          </h3>
-
-          <div className="flex items-baseline gap-1">
-            <span className="text-red-600 font-bold">${property.price}</span>
-            <span className="text-sm text-gray-500">/night</span>
-          </div>
         </div>
+      </section>
 
-        {/* Availability */}
-        <div className="mt-3 p-3 bg-gray-100 rounded text-center text-sm text-black">
-          <p className="font-medium">Availability Preview</p>
-          <p className="text-black text-xs font-medium ">{property.availability}</p>
+      {/* Properties Grid */}
+      <div className="min-h-screen bg-gray-50 p-20">
+        <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+          Featured Properties
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {filtered.map((property) => (
+            <div
+              key={property.id}
+              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
+            >
+              <img
+                src={property.image}
+                alt={property.name}
+                className="h-32 w-full object-cover"
+              />
+              <div className="p-4">
+                <div className="flex justify-between items-center">
+                  <h3 className="text-lg font-semibold text-gray-900">
+                    {property.name}
+                  </h3>
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-red-600 font-bold">
+                      ${property.price}
+                    </span>
+                    <span className="text-sm text-gray-500">/night</span>
+                  </div>
+                </div>
+                <div className="mt-3 p-3 bg-gray-100 rounded text-center text-sm text-black">
+                  <p className="font-medium">Availability Preview</p>
+                  <p className="text-black text-xs font-medium ">
+                    {property.availability}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
-  ))}
-</div>
-
-    </div>
-
-
-
-
     </div>
   );
 }
- 
