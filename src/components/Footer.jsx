@@ -33,7 +33,7 @@ const Footer = () => {
 
 
              
-             <img src={twitter} alt="" className='w-4 h-5 ' />
+             <img src={twitter} alt="" className='w-4 h-4 ' />
           
            <img src={insta} alt=""  className='w-4 h-4 '/>
               
