@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { FiSearch } from "react-icons/fi";
+
 
 const properties = [
   {
@@ -96,7 +96,21 @@ const Properties = () => {
   >
     {/* Search Icon */}
     <span className="pl-3 text-gray-400">
-      <FiSearch className="h-5 w-5" />
+     <svg
+  xmlns="http://www.w3.org/2000/svg"
+  className="h-5 w-5 text-gray-400"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke="currentColor"
+  strokeWidth="2"
+>
+  <path
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1110.5 3a7.5 7.5 0 016.15 13.65z"
+  />
+</svg>
+
     </span>
 
     {/* Input */}
