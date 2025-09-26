@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
-
-// // Custom Card Component
+// Custom Card Component
 // function Card({ children, className }) {
 //   return (
 //     <div
@@ -15,6 +14,9 @@ import { Link } from "react-router-dom";
 //   );
 // }
 
+// function CardContent({ children, className }) {
+//   return <div className={`mt-2 ${className || ""}`}>{children}</div>;
+// }
 // function CardContent({ children, className }) {
 //   return <div className={`mt-2 ${className || ""}`}>{children}</div>;
 // }
@@ -158,7 +160,7 @@ export default function ViewBooking() {
                 type="text"
                 value={guests}
                 readOnly
-                className="w-full py-2 text-center border rounded-xl border-gray-300"
+                className="w-20 py-2 text-center border rounded-xl border-gray-300"
               />
 
               <button

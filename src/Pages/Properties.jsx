@@ -180,3 +180,120 @@ const Properties = () => {
 }
 
 export default Properties
+
+
+
+
+// import React, { useState, useEffect } from "react";
+// import { Link } from "react-router-dom";
+// import { FiSearch } from "react-icons/fi";
+// import axios from "axios";
+
+// const Properties = () => {
+//   const [search, setSearch] = useState(""); 
+//   const [properties, setProperties] = useState([]); // backend se data
+//   const [filtered, setFiltered] = useState([]); // search result
+  
+//   // Fetch properties from backend (abhi ke liye dummy API use kar lo)
+//   useEffect(() => {
+//     const fetchProperties = async () => {
+//       try {
+//         // yahan pe apni API ka endpoint daalna hoga
+//         const res = await axios.get("http://localhost:5000/api/properties");
+//         setProperties(res.data);
+//         setFiltered(res.data);
+//       } catch (error) {
+//         console.error("Error fetching properties:", error);
+//       }
+//     };
+//     fetchProperties();
+//   }, []);
+
+//   // Search button handler
+//   const handleSearch = () => {
+//     const filteredData = properties.filter((property) =>
+//       property.name.toLowerCase().includes(search.toLowerCase())
+//     );
+//     setFiltered(filteredData);
+//   };
+
+//   const ViewBookingId = "booking114";
+
+//   return (
+//     <div className="py-5 px-10">
+//       <section className="bg-white py-6 text-center">
+//         <h2 className="text-2xl font-bold text-gray-900">
+//           Discover Your Next Getaway
+//         </h2>
+
+//         <div className="mt-6 flex justify-center gap-6">
+//           <div className="flex items-center border rounded-md shadow-sm overflow-hidden w-[30%] max-w-xl">
+//             {/* Search Icon */}
+//             <span className="pl-3 text-gray-400">
+//               <FiSearch className="h-5 w-5" />
+//             </span>
+
+//             {/* Input */}
+//             <input
+//               type="text"
+//               placeholder="Search by location, property type, or amenities..."
+//               className="flex-1 px-3 py-2 focus:outline-none text-gray-700"
+//               value={search}
+//               onChange={(e) => setSearch(e.target.value)}
+//             />
+//           </div>
+
+//           <button
+//             className="px-6 py-2 text-white rounded-md bg-[#4B5470]"
+//             onClick={handleSearch}
+//           >
+//             Search
+//           </button>
+//         </div>
+//       </section>
+
+//       {/* Featured Properties */}
+//       <div className="min-h-screen bg-gray-50">
+//         <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+//           Featured Properties
+//         </h2>
+//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+//           {filtered.map((property) => (
+//             <Link
+//               key={property.id}
+//               to={`/viewbooking/${property.id}`} // each property id pass as param
+//               className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
+//             >
+//               <img
+//                 src={property.image}
+//                 alt={property.name}
+//                 className="h-32 w-full object-cover"
+//               />
+//               <div className="p-4">
+//                 <div className="flex justify-between items-center">
+//                   <h3 className="text-lg font-semibold text-gray-900">
+//                     {property.name}
+//                   </h3>
+//                   <div className="flex items-baseline gap-1">
+//                     <span className="text-red-600 font-bold">
+//                       ${property.price}
+//                     </span>
+//                     <span className="text-sm text-gray-500">/night</span>
+//                   </div>
+//                 </div>
+//                 <div className="mt-3 p-3 bg-gray-100 rounded text-center text-sm text-black">
+//                   <p className="font-medium">Availability Preview</p>
+//                   <p className="text-black text-xs font-medium ">
+//                     {property.availability}
+//                   </p>
+//                 </div>
+//               </div>
+//             </Link>
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Properties;
