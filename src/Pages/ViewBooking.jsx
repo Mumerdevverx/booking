@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { Wifi, Car, Utensils, Snowflake } from "lucide-react";
+
 import { Link } from "react-router-dom";
 // Custom Card Component
 // function Card({ children, className }) {
@@ -61,9 +61,9 @@ export default function ViewBooking() {
 
   return (
     <>
-      <div className="min-h-screen bg-white p-30 pt-30 flex flex-col lg:flex-row gap-8">
+      <div className="min-h-screen bg-white lg:p-30 lg:pt-30 max-sm:p-6 min-md:p-10 flex flex-col lg:flex-row gap-8">
         {/* Left Side - Images */}
-        <div className="flex-1">
+        <div className="flex-1 ">
           <div className="rounded-lg overflow-hidden shadow-md">
             <img
               src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
