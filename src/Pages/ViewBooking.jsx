@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Wifi, Car, Utensils, Snowflake } from "lucide-react";
+
 import { Link } from "react-router-dom";
 
 // // Custom Card Component
